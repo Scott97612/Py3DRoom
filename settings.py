@@ -1,0 +1,35 @@
+import math
+
+# basic settings
+RES = WIDTH, HEIGHT = 1920, 1080
+HALF_WIDTH = WIDTH // 2
+HALF_HEIGHT = HEIGHT // 2
+FPS = 60
+FLOOR_COLOR = (100, 81, 81)
+
+# Player settings
+PLAYER_POS = 11, 20
+PLAYER_ANGLE = -math.pi / 2
+PLAYER_SPEED = 0.004
+PLAYER_ROT_SPEED = 0.003
+PLAYER_SIZE_SCALE = 60
+
+# mouse control
+MOUSE_SENSITIVITY = 0.0002
+MOUSE_MAX_REL = 40
+MOUSE_BORDER_LEFT = 50
+MOUSE_BORDER_RIGHT = WIDTH - MOUSE_BORDER_LEFT
+
+# Ray Casting settings
+FOV = math.pi / 3
+HALF_FOV = FOV / 2
+NUM_RAYS = WIDTH // 2
+HALF_NUM_RAYS = NUM_RAYS // 2
+DELTA_ANGLE = FOV / NUM_RAYS
+MAX_DEPTH = 20
+SCREEN_DIST = HALF_WIDTH / math.tan(HALF_FOV)  # the distance between screen and the player
+SCALE = WIDTH // NUM_RAYS
+
+# render objects
+TEXTURE_SIZE = 1024
+HALF_TEXTURE_SIZE = TEXTURE_SIZE // 2
